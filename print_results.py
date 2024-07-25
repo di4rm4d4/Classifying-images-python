@@ -71,7 +71,7 @@ def print_results(results_dic, results_stats_dic, model,
 
     for key in results_stats_dic:
 
-        if "p" in key:
+        if "p" == key[0]:
                 print(results_stats_dic[pct_match])
                 print(results_stats_dic[pct_correct_breed])
                 print(results_stats_dic[pct_correct_dogs])
@@ -80,9 +80,7 @@ def print_results(results_dic, results_stats_dic, model,
     if (print_incorrect_dogs and ( (results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs']) != results_stats_dic['n_images'])):
         print("\nINCORRECT Dog/NOT dog assignments:")
 
-        for key in results_dic:
-                if results_dic[key][2] == 0:
-                        print(results_dic[key][0], results_dic[key][1])
+      
 
     if (print_incorrect_breed and 
        (results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed'] )
