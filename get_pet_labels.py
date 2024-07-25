@@ -49,6 +49,16 @@ def get_pet_labels(image_dir):
     for idx in range(0, len(in_files), 1):
 
       if in_files[idx][0] != ".":
+          pet_label = ''
+          lowercase_labels = in_files[idx].lower()
+          split_labels = lowercase_labels.split('_')
+
+          for x in split_labels:
+              if x.isalpha():
+                  pet_label += x + ''
+
+        pet_label = pet_label.strip()
+        
         parts = in_files[idx].split('_')
         breed_name_parts = parts[:-1]
         pet_label = ' '.join(breed_name_parts).lower()
