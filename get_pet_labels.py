@@ -41,11 +41,8 @@ def get_pet_labels(image_dir):
       List. The list contains for following item:
          index 0 = pet image label (string)
     """
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    relative_image_dir = 'pet_images'
-    image_dir = os.path.join(script_dir, relative_image_dir)
     
-    in_files = os.listdir(image_dir)
+    in_files = listdir(image_dir)
 
     results_dic = dict()
 
