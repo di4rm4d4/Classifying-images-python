@@ -58,10 +58,7 @@ def get_pet_labels(image_dir):
                   pet_label += x + ''
 
         pet_label = pet_label.strip()
-        
-        parts = in_files[idx].split('_')
-        breed_name_parts = parts[:-1]
-        pet_label = ' '.join(breed_name_parts).lower()
+
 
       if in_files[idx] not in results_dic:
         results_dic[in_files[idx]] = [pet_label]
